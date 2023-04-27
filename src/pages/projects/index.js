@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../../components/Layout'
 import { Link, graphql } from 'gatsby';
+import GatsbyImage from 'gatsby-image';
 import * as styles from '../../styles/projects.module.css';
 
 function index({ data }) {
@@ -15,6 +16,7 @@ function index({ data }) {
                 <div className={styles.projects} >
                     {projects.map(project => (
                         <Link to={'/projects/' + project.frontmatter.slug} key={project.key} >
+                            <GatsbyImage fluid={project.frontmatter.thumbs.childImageSharp.fluid} />
                             <h3>{project.frontmatter.title}</h3>
                             <p>{project.frontmatter.stack}</p>
                         </Link>
@@ -36,15 +38,21 @@ query projectsPage {
     projects: allMarkdownRemark(sort: {frontmatter: {title: ASC}}) {
         nodes {
           frontmatter {
-                title
-                stack
-                slug
+            title
+            stack
+            slug
+            thumbs {
+              childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                   }
+              }
             }
-            id
+          }
+          id
         }
-    }
-
-    contact: site {
+      }
+      contact: site {
         siteMetadata {
           contact
         }
