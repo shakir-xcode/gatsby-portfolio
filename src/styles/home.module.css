@@ -1,0 +1,27 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.header h2 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.btn {
+  padding: 8px 42px;
+  font-size: 1.2rem;
+  background-color: #ac0f6a;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ac0f6bbb;
+}

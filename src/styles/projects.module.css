@@ -1,0 +1,11 @@
+.projectContainer {
+  text-align: center;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  justify-items: center;
+  margin: 2rem auto;
+}
