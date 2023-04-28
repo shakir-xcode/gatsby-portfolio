@@ -13,7 +13,7 @@ function ProjectDetail({ data }) {
       <div className={style.details}>
         <h1>{title}</h1>
         <h3>{stack}</h3>
-        <div>
+        <div className={style.featureImage}>
           <GatsbyImage fluid={featuredImg.childImageSharp.fluid} />
         </div>
         <div className={style.html} dangerouslySetInnerHTML={{ __html: html }} />
