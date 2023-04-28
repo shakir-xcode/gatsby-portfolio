@@ -5,7 +5,6 @@ import { Link, graphql } from "gatsby";
 import GatsbyImage from "gatsby-image";
 
 export default function Home({ data }) {
-  console.log(data.image)
   const { title, description } = data.info.siteMetadata;
 
   return (
