@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <nav className='navbar'>
             <div>
-                <h1>The Gatsby</h1>
+                <Link to='/' ><h1>The Gatsby</h1></Link>
             </div>
             <div className='link-container'>
                 <Link to="/">Home</Link>
